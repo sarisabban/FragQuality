@@ -14,7 +14,7 @@ def NEW(pose):
 	frag = open(FRAGMENT , 'r')
 	rmsd = open('temp.dat' , 'w')
 	for line in frag:
-		if line.startswith(' position:'):
+		if line.lstrip().startswith('position:'):
 			line = line.split()
 			size = line[1]
 	frag.close()
